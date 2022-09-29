@@ -117,6 +117,7 @@ a {
 .nav-contacts .link:hover,
 .nav-contacts .link:focus {
   color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link.current::after {
   content: "";
@@ -150,7 +151,6 @@ a {
   letter-spacing: 0.02em;
   align-items: center;
   color: var(--primary-text-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-contacts .link svg {
@@ -286,6 +286,7 @@ img {
   right: 0;
   width: 100%;
   height: 70px;
+  font-weight: 700;
   color: var(--primary-background-color);
   background: rgba(47, 48, 58, 0.8);
   text-transform: uppercase;
@@ -337,16 +338,17 @@ img {
   background: var(--primary-background-color);
   border-radius: 50%;
   justify-content: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover {
   background-color: var(--accent-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link svg {
   fill: #afb1b8;
 }
 .social-link:hover svg {
   fill: var(--primary-background-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .about-member {
@@ -373,7 +375,6 @@ img {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 3px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon svg {
@@ -381,10 +382,12 @@ img {
 }
 .clients-icon:hover {
   border: 1px solid var(--accent-color);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-icon:hover svg,
 .clients-icon:focus svg {
   fill: var(--accent-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon.current svg {
@@ -597,15 +600,14 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
-  opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden .modal {
@@ -625,17 +627,15 @@ img {
 }
 .close-button {
   position: absolute;
-  right: 8px;
   top: 8px;
+  right: 8px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: var(--primary-background-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-}
-
-.close-button:hover {
-  background-color: var(--accent-color);
-  color: var(--primary-background-color);
+  background: var(--primary-background-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
